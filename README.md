@@ -33,9 +33,6 @@ gulp.task('ts', function () {
                             .pipe(ts(tsProject));
 
     return tsResult.js
-                   .pipe(sourcemaps.write("."))
-                   .pipe(cached('ts-js'))
-                   .pipe(debug({ title: "ts" }))
                    .pipe(gulp.dest("."));
 });
 ```
